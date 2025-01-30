@@ -1,7 +1,17 @@
 #!/bin/bash         
+
+# Script for backup all or selected databases
+# If you need automated login for mysqldump, use ~/.my.cnf with at least this contents:
+#[mysqldump]
+#user=root
+#password=XXXX
+#host=localhost
+
+
+
 PATH=$PATH:/usr/sbin
 MAXDAYS=15  
-                                                             
+
 MYSQLDIR="/var/lib/mysql"
 BACKUPDIR="/var/backups/mysql"
 EXCEPTIONS="mysql performance_schema lost+found"
